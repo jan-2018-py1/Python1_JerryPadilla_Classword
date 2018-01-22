@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+<body>
+     <div class="containe">
+          <h2>Submitted info</h2>
+
+               <p>Name: {{ context.name }}</p>
+               <p>Location: {{ context.location }}</p>
+               <p>Favorite Language: {{ context.language }}</p>
+               <p>Comment: {{ context.comment }}</p>
+
+     </div>
+
+     <form class="form-group" action="/" method="get">
+          <input type="submit" name="" value="Home">
+     </form>
+
+</body>
+</html>
