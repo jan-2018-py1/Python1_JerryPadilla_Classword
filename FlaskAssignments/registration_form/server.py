@@ -36,13 +36,13 @@ def validate():
         flash("Thank you for submitting your info")
         return redirect('/')
 
-    context = {
-        'name':request.form['name'],
-        'location':request.form['location'],
-        'language':request.form['language'],
-        'comment':request.form['comment'],
-    }
+    # context = {
+    #     'name':request.form['name'],
+    #     'location':request.form['location'],
+    #     'language':request.form['language'],
+    #     'comment':request.form['comment'],
+    # }
 
 
-    return render_template('result.html', context=context)
+    # return render_template('result.html', context=context)
 app.run(debug=True)
