@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Login</title>
+</head>
+<body>
+     <h4>Welcome</h4>
+     <h5>Please Login</h5>
+
+     <div class="container">
+          <h5>Login</h5>
+
+          {% with messages = get_flashed_messages() %}
+
+          {% if messages %}
+
+          {% for message in messages %}
+               <strong>{{ message }}</strong>
+          {% endfor %}
+
+          {% endif %}
+
+          {% endwith %}
+
+          <form action="/process_login" method="post">
+
+               <div class="form-control">
+                    <label for="email">Email: </label>
+                    <input class="form-control" type="email" name="email" >
+               </div>
+
+               <div class="form-control">
+                    <label  for="password">Password: </label>
+                    <input class="form-control" type="password" name="password" >
+               </div>
+
+               <input class="btn" type="submit" name="submit" value="Login">
+
+          </form>
+
+          <form action="/register" method="get">
+               <input type="submit" name="login" value="Register">
+          </form>
+          <form action="/" method="get">
+               <input type="submit" name="home" value="Home">
+          </form>
+          <form action="/clear_all" method="get">
+               <input type="submit" name="clear_all" value="Hard Reset">
+          </form>
+</body>
+</html>
