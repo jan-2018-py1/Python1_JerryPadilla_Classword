@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Ninja</title>
+</head>
+<body>
+
+
+     {% if session['color'] == 'all' %}
+
+          <img src="{{ url_for('static', filename='images/donatello.jpg') }}" alt="donatello">
+          <img src="{{ url_for('static', filename='images/leonardo.jpg') }}" alt="leonardo">
+          <img src="{{ url_for('static', filename='images/michelangelo.jpg') }}" alt="michelangelo">
+          <img src="{{ url_for('static', filename='images/raphael.jpg') }}" alt="raphael">
+
+     {% endif %}
+
+     {% if session['color'] == 'blue' %}
+          <img src="{{ url_for('static', filename='images/leonardo.jpg') }}" alt="leonardo">
+     {% endif %}
+
+     {% if session['color'] == 'orange' %}
+          <img src="{{ url_for('static', filename='images/michelangelo.jpg') }}" alt="michelangelo">
+     {% endif %}
+
+     {% if session['color'] == 'red' %}
+          <img src="{{ url_for('static', filename='images/raphael.jpg') }}" alt="raphael">
+     {% endif %}
+
+     {% if session['color'] == 'purple' %}
+          <img src="{{ url_for('static', filename='images/donatello.jpg') }}" alt="donatello">
+     {% endif %}
+
+     {% if session['color'] == None %}
+          <img src="{{ url_for('static', filename='images/notapril.jpg') }}" alt="april">
+     {% endif %}
+
+
+</body>
+</html>
